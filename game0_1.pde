@@ -1,3 +1,4 @@
+//NOTE: I know the variable names are excessive I just cant be bothered to change them
 float _width = 800;
 float _height = 800;
 Player p = new Player(_width/2, 50);
@@ -132,8 +133,6 @@ class Objs {
   }
   int checkCollision(float px, float py) {
     int a = int(25/2); //a is radius of player
-    // playerX = right                    playerY closer to top than y + height
-    //                    playerY further down than y
     if ((px-a == x+l) && ((py+a >= y) && (py+a <= y+h))) { //checks if the player's X is equal to the right side of the object, and if the player's Y is within the height of the object.
       p.xpos += a;
       return 1;
